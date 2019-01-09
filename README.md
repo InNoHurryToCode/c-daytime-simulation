@@ -2,4 +2,4 @@
 A simple time simulation written in ANSI-C
 
 ## Demonstration
-[wandbox](https://wandbox.org/permlink/aQq4GOMtTbqp2ezG)
+[wandbox](https://wandbox.org/permlink/4TFiU0SSDp5Jth3m)

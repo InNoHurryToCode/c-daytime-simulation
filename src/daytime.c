@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stddef.h>
 #include "daytime.h"
 
 static void daytime_updateSecond(Daytime *const manager) {
@@ -6,7 +6,6 @@ static void daytime_updateSecond(Daytime *const manager) {
         return;
     }
 
-    printf("%d-%d-%dT%d-%d-%d+00:00\n", manager->year, manager->month, manager->day, manager->hour, manager->minute, manager->second);
     ++manager->second;
 }
 
