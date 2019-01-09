@@ -8,8 +8,7 @@ enum timeName {
     NOON,
     AFTERNOON,
     EVENING,
-    NIGHT,
-    MIDNIGHT
+    NIGHT
 };
 
 enum days {
@@ -29,7 +28,8 @@ enum months {
     FEBRUARY,
     MARCH,
     APRIL,
-    JUNY,
+    MAY,
+    JULY,
     JUNE,
     AUGUST,
     SEPTEMBER,
@@ -38,7 +38,7 @@ enum months {
     DECEMBER
 };
 
-typedef struct Daytime daytime;
+typedef struct Daytime Daytime;
 
 struct Daytime {
     unsigned char second;
@@ -49,9 +49,13 @@ struct Daytime {
     unsigned char week;
     unsigned char month;
     unsigned int year;
-}
+};
 
 Daytime *daytime_ctor(void);
-void daytime_update(daytimeManager *const manager);
+void daytime_update(Daytime *const manager);
+const char *daytime_getTimeName(const unsigned char hour);
+const char *daytime_getDayName(const unsigned char weekDay);
+const char *daytime_getMonthName(const unsigned char month);
+unsigned char daytime_getDaysOfMonth(const unsigned char month, const unsigned int year);
 
 #endif
